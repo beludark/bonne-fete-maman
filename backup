@@ -195,7 +195,8 @@
             width: 80%;
         }
 
-        .close {
+        .close
+{
             color: #aaa;
             float: right;
             font-size: 28px;
@@ -228,19 +229,19 @@
             <div class="folders">
                 <!-- Dossier Montagne -->
                 <div class="folder" onclick="openModal('montagne')">
-                    <img src="https://via.placeholder.com/200" alt="Montagne">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1553/1553148.png" alt="Montagne">
                     <p>Montagne</p>
                 </div>
 
                 <!-- Dossier Avion -->
                 <div class="folder" onclick="openModal('avion')">
-                    <img src="https://via.placeholder.com/200" alt="Avion">
-                    <p>Avion</p>
+                    <img src="https://cdn.icon-icons.com/icons2/2070/PNG/512/airplane_icon_126136.png" alt="Avion">
+                    <p>Suède</p>
                 </div>
 
                 <!-- Dossier Soleil -->
                 <div class="folder" onclick="openModal('soleil')">
-                    <img src="https://via.placeholder.com/200" alt="Soleil">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2698/2698194.png" alt="Soleil">
                     <p>Soleil</p>
                 </div>
             </div>
@@ -253,9 +254,9 @@
             <span class="close" onclick="closeModal('montagne')">&times;</span>
             <!-- Contenu de l'album montagne -->
             <h3>Album Montagne</h3>
-            <img src="https://via.placeholder.com/400" alt="Image 1">
-            <img src="https://via.placeholder.com/400" alt="Image 2">
-            <img src="https://via.placeholder.com/400" alt="Image 3">
+            <img src="images/ski.jpg" alt="Image 1" style="max-width: 100%; height: auto;">
+            <img src="images/ski2.jpg" alt="Image 2" style="max-width: 100%; height: auto;">
+            <img src="https://via.placeholder.com/400" alt="Image 3" style="max-width: 100%; height: auto;">
         </div>
     </div>
 
@@ -264,9 +265,9 @@
             <span class="close" onclick="closeModal('avion')">&times;</span>
             <!-- Contenu de l'album avion -->
             <h3>Album Avion</h3>
-            <img src="https://via.placeholder.com/400" alt="Image 1">
-            <img src="https://via.placeholder.com/400" alt="Image 2">
-            <img src="https://via.placeholder.com/400" alt="Image 3">
+            <img src="images/suede.jpg" alt="Image 1" style="max-width: 100%; height: auto;">
+            <img src="images/suede2.jpg" alt="Image 2" style="max-width: 100%; height: auto;">
+            <img src="https://via.placeholder.com/400" alt="Image 3" style="max-width: 100%; height: auto;">
         </div>
     </div>
 
@@ -275,9 +276,9 @@
             <span class="close" onclick="closeModal('soleil')">&times;</span>
             <!-- Contenu de l'album soleil -->
             <h3>Album Soleil</h3>
-            <img src="https://via.placeholder.com/400" alt="Image 1">
-            <img src="https://via.placeholder.com/400" alt="Image 2">
-            <img src="https://via.placeholder.com/400" alt="Image 3">
+            <img src="https://via.placeholder.com/400" alt="Image 1" style="max-width: 100%; height: auto;">
+            <img src="https://via.placeholder.com/400" alt="Image 2" style="max-width: 100%; height: auto;">
+            <img src="https://via.placeholder.com/400" alt="Image 3" style="max-width: 100%; height: auto;">
         </div>
     </div>
        <!-- Section Contact -->
