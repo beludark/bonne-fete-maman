@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyeuse Fête des Mères</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"> <!-- Ajout du lien vers la feuille de style AOS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: url('https://img.freepik.com/vecteurs-libre/fond-plat-fete-meres_23-2149385190.jpg?t=st=1716737382~exp=1716740982~hmac=ef0a8e52d8d5c1159e320f831bc2f3b8bf9411f55ec14060cce4f6c5f022fa66&w=1380') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .hero h1 {
+            font-size: 4rem;
+            margin: 0;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin: 10px 0 0;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+        .content, .gallery, .contact {
+            padding: 50px 20px;
+        }
+        .content h2, .gallery h2, .contact h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .content p, .gallery p, .contact p {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .button:hover {
+            background-color: #0056b3;
+            transform: translateY(-5px);
+        }
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+            border-radius: 15px;
+        }
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer p {
+            margin: 0;
+        }
+        .heart {
+            color: #e25555;
+            font-size: 2rem;
+            margin: 0 5px;
+        }
+        .heart-small {
+            color: #e25555;
+            font-size: 1.5rem;
+            margin: 0 3px;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Media Queries pour les petits écrans (smartphones) */
+        @media only screen and (max-width: 767px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            /* Ajoutez d'autres styles spécifiques aux smartphones ici */
+        }
+        
+        /* Media Queries pour les tablettes */
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+            /* Ajoutez d'autres styles spécifiques aux tablettes ici */
+        }
+        
+        /* Media Queries pour les écrans de taille moyenne (ordinateurs portables) */
+        @media only screen and (min-width: 992px) and (max-width: 1199px) {
+            /* Ajoutez d'autres styles spécifiques aux écrans de taille moyenne ici */
+        }
+
+        /* Teintes de blanc pour les différentes sections */
+        .content {
+            background-color: #f1f1f1; /* Gris très clair */
+        }
+        .gallery {
+            background-color: #f8f8f8; /* Blanc légèrement gris */
+        }
+        .contact {
+            background-color: #ffffff; /* Blanc pur */
+        }
+    </style>
+</head>
+<body>
+    <div class="hero"></div>
+    <div class="content" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <h2>À Propos de la Fête des Mères <span class="heart">❤️</span></h2>
+            <p>La Fête des Mères est l'occasion de célébrer et d'honorer les mères du monde entier. C'est un jour pour exprimer notre amour et notre gratitude envers celles qui nous ont donné la vie et nous ont soutenus tout au long de notre parcours. <span class="heart-small">❤️</span></p>
+        </div>
+    </div>
+    <div class="gallery" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <h2>Galerie de Souvenirs <span class="heart">❤️</span></h2>
+            <p>Quelques moments précieux avec maman <span class="heart-small">❤️</span></p>
+            <img src="images/IMG-9175.jpg" alt="Image 1">
+            <img src="images/IMG-9175.jpg" alt="Image 2">
+            <img src="images/IMG-9175.jpg" alt="Image 3">
+        </div>
+    </div>
+    <div class="content" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <h2>Contact <span class="heart">❤️</span></h2>
+            <p>Envoie nous autant de messages que tu veux.</p>
+            
+        </div>
+    </div>
+    <div class="footer" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <p>© 2024 Mon magnifique site internet. Tous droits réservés.</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> <!-- Ajout du lien vers le script AOS -->
+    <script>
+        AOS.init(); // Initialisation de AOS pour activer les animations
+    </script>
+</body>
+</html>
