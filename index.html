@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joyeuse Fête des Mères</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"> <!-- Ajout du lien vers la feuille de style AOS -->
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -32,10 +33,12 @@
         .hero h1 {
             font-size: 4rem;
             margin: 0;
+            animation: fadeInDown 1.5s ease-in-out;
         }
         .hero p {
             font-size: 1.5rem;
             margin: 10px 0 0;
+            animation: fadeInUp 1.5s ease-in-out;
         }
         .content, .gallery, .contact {
             padding: 50px 20px;
@@ -90,43 +93,97 @@
             font-size: 1.5rem;
             margin: 0 3px;
         }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Media Queries pour les petits écrans (smartphones) */
+        @media only screen and (max-width: 767px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            /* Ajoutez d'autres styles spécifiques aux smartphones ici */
+        }
+        
+        /* Media Queries pour les tablettes */
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+            /* Ajoutez d'autres styles spécifiques aux tablettes ici */
+        }
+        
+        /* Media Queries pour les écrans de taille moyenne (ordinateurs portables) */
+        @media only screen and (min-width: 992px) and (max-width: 1199px) {
+            /* Ajoutez d'autres styles spécifiques aux écrans de taille moyenne ici */
+        }
+
+        /* Teintes de blanc pour les différentes sections */
+        .content {
+            background-color: #f1f1f1; /* Gris très clair */
+        }
+        .gallery {
+            background-color: #f8f8f8; /* Blanc légèrement gris */
+        }
+        .contact {
+            background-color: #ffffff; /* Blanc pur */
+        }
     </style>
 </head>
 <body>
     <div class="hero"></div>
-    <div class="content">
+    <div class="content" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <h2>À Propos de la Fête des Mères <span class="heart">❤️</span></h2>
             <p>La Fête des Mères est l'occasion de célébrer et d'honorer les mères du monde entier. C'est un jour pour exprimer notre amour et notre gratitude envers celles qui nous ont donné la vie et nous ont soutenus tout au long de notre parcours. <span class="heart-small">❤️</span></p>
         </div>
     </div>
-    <div class="gallery">
+    <div class="gallery" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <h2>Galerie de Souvenirs <span class="heart">❤️</span></h2>
             <p>Quelques moments précieux avec maman <span class="heart-small">❤️</span></p>
             <img src="images/IMG-9175.jpg" alt="Image 1">
-            <img src="https://images.unsplash.com/photo-1520975697484-61b8bce1fc1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Image 2">
-            <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Image 3">
+            <img src="images/IMG-9175.jpg" alt="Image 2">
+            <img src="images/IMG-9175.jpg" alt="Image 3">
         </div>
     </div>
-    <div class="content">
-        <div class="container">
-            <h2>Message Spécial <span class="heart">❤️</span></h2>
-            <p>Merci maman pour ton amour inconditionnel, ta patience infinie et ton soutien constant. Tu es notre roc et notre guide. En cette journée spéciale, nous te souhaitons tout le bonheur du monde. Joyeuse Fête des Mères ! <span class="heart-small">❤️</span></p>
-        </div>
-    </div>
-    <div class="contact">
+    <div class="content" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <h2>Contact <span class="heart">❤️</span></h2>
-            <p>Pour toute question ou suggestion, n'hésitez pas à nous contacter. <span class="heart-small">❤️</span></p>
-            <p>Email: contact@fetedesmeres.com</p>
-            <a href="mailto:contact@fetedesmeres.com" class="button">Envoyer un Email</a>
+            <p>Envoie nous autant de messages que tu veux.</p>
+            
         </div>
     </div>
-    <div class="footer">
+    <div class="footer" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
-            <p>© 2024 Fête des Mères. Tous droits réservés. <span class="heart">❤️</span></p>
+            <p>© 2024 Mon magnifique site internet. Tous droits réservés.</p>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> <!-- Ajout du lien vers le script AOS -->
+    <script>
+        AOS.init(); // Initialisation de AOS pour activer les animations
+    </script>
 </body>
 </html>
