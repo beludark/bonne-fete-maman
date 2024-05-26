@@ -150,6 +150,16 @@
         .contact {
             background-color: #ffffff; /* Blanc pur */
         }
+
+        /* Styles pour les dossiers */
+        .folder {
+            cursor: pointer;
+        }
+
+        /* Styles pour les albums */
+        .album {
+            display: none; /* Masquer initialement tous les albums */
+        }
     </style>
 </head>
 <body>
@@ -160,30 +170,88 @@
             <p>La Fête des Mères est l'occasion de célébrer et d'honorer les mères du monde entier. C'est un jour pour exprimer notre amour et notre gratitude envers celles qui nous ont donné la vie et nous ont soutenus tout au long de notre parcours. <span class="heart-small">❤️</span></p>
         </div>
     </div>
+
+    <!-- Section pour les dossiers (montagne, avion, soleil) -->
     <div class="gallery" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
-            <h2>Galerie de Souvenirs <span class="heart">❤️</span></h2>
-            <p>Quelques moments précieux avec maman <span class="heart-small">❤️</span></p>
-            <img src="images/IMG-9175.jpg" alt="Image 1">
-            <img src="images/IMG-9175.jpg" alt="Image 2">
-            <img src="images/IMG-9175.jpg" alt="Image 3">
+            <h2>Galerie de Souvenirs <span class="heart">❤️</span        </h2>
+            <p>Choisissez un dossier pour explorer les souvenirs <span class="heart-small">❤️</span></p>
+
+            <!-- Dossier Montagne -->
+            <div class="folder" onclick="showAlbum('montagne')">
+                <img src="https://via.placeholder.com/200" alt="Montagne">
+                <p>Montagne</p>
+            </div>
+
+            <!-- Dossier Avion -->
+            <div class="folder" onclick="showAlbum('avion')">
+                <img src="https://via.placeholder.com/200" alt="Avion">
+                <p>Avion</p>
+            </div>
+
+            <!-- Dossier Soleil -->
+            <div class="folder" onclick="showAlbum('soleil')">
+                <img src="https://via.placeholder.com/200" alt="Soleil">
+                <p>Soleil</p>
+            </div>
+
+            <!-- Albums -->
+            <div class="album montagne">
+                <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" alt="Image 1">
+                <img src="https://via.placeholder.com/400" alt="Image 2">
+                <img src="https://via.placeholder.com/400" alt="Image 3">
+            </div>
+
+            <div class="album avion">
+                <img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" alt="Image 1">
+                <img src="https://via.placeholder.com/400" alt="Image 2">
+                <img src="https://via.placeholder.com/400" alt="Image 3">
+            </div>
+
+            <div class="album soleil">
+                <img src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg" alt="Image 1">
+                <img src="https://via.placeholder.com/400" alt="Image 2">
+                <img src="https://via.placeholder.com/400" alt="Image 3">
+            </div>
         </div>
     </div>
+
+    <!-- Section Contact -->
     <div class="content" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <h2>Contact <span class="heart">❤️</span></h2>
             <p>Envoie nous autant de messages que tu veux.</p>
-            
         </div>
     </div>
+
+    <!-- Footer -->
     <div class="footer" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <p>© 2024 Mon magnifique site internet. Tous droits réservés.</p>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> <!-- Ajout du lien vers le script AOS -->
+
+    <!-- Script pour afficher/masquer les albums -->
     <script>
-        AOS.init(); // Initialisation de AOS pour activer les animations
+        function showAlbum(albumName) {
+            // Masquer tous les albums
+            var albums = document.querySelectorAll('.album');
+            albums.forEach(function(album) {
+                album.style.display = 'none';
+            });
+
+            // Afficher l'album correspondant
+            var selectedAlbum = document.querySelector('.' + albumName);
+            if (selectedAlbum) {
+                selectedAlbum.style.display = 'block';
+            }
+        }
+    </script>
+
+    <!-- Script pour l'initialisation de AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
 </html>
