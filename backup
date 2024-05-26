@@ -152,13 +152,61 @@
         }
 
         /* Styles pour les dossiers */
+        .folders {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
         .folder {
             cursor: pointer;
+            flex: 1;
+        }
+        .folder img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
         }
 
         /* Styles pour les albums */
         .album {
             display: none; /* Masquer initialement tous les albums */
+        }
+
+        /* Modales pour les albums */
+        .modal {
+            display: none; /* Masquer initialement la modale */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8); /* Fond sombre semi-transparent */
+        }
+
+        .modal-content {
+            margin: 10% auto;
+            background-color: #fefefe;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -174,49 +222,65 @@
     <!-- Section pour les dossiers (montagne, avion, soleil) -->
     <div class="gallery" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
-            <h2>Galerie de Souvenirs <span class="heart">❤️</span        </h2>
+            <h2>Galerie de Souvenirs <span class="heart">❤️</span></h2>
             <p>Choisissez un dossier pour explorer les souvenirs <span class="heart-small">❤️</span></p>
 
-            <!-- Dossier Montagne -->
-            <div class="folder" onclick="showAlbum('montagne')">
-                <img src="https://via.placeholder.com/200" alt="Montagne">
-                <p>Montagne</p>
-            </div>
+            <div class="folders">
+                <!-- Dossier Montagne -->
+                <div class="folder" onclick="openModal('montagne')">
+                    <img src="https://via.placeholder.com/200" alt="Montagne">
+                    <p>Montagne</p>
+                </div>
 
-            <!-- Dossier Avion -->
-            <div class="folder" onclick="showAlbum('avion')">
-                <img src="https://via.placeholder.com/200" alt="Avion">
-                <p>Avion</p>
-            </div>
+                <!-- Dossier Avion -->
+                <div class="folder" onclick="openModal('avion')">
+                    <img src="https://via.placeholder.com/200" alt="Avion">
+                    <p>Avion</p>
+                </div>
 
-            <!-- Dossier Soleil -->
-            <div class="folder" onclick="showAlbum('soleil')">
-                <img src="https://via.placeholder.com/200" alt="Soleil">
-                <p>Soleil</p>
-            </div>
-
-            <!-- Albums -->
-            <div class="album montagne">
-                <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" alt="Image 1">
-                <img src="https://via.placeholder.com/400" alt="Image 2">
-                <img src="https://via.placeholder.com/400" alt="Image 3">
-            </div>
-
-            <div class="album avion">
-                <img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" alt="Image 1">
-                <img src="https://via.placeholder.com/400" alt="Image 2">
-                <img src="https://via.placeholder.com/400" alt="Image 3">
-            </div>
-
-            <div class="album soleil">
-                <img src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg" alt="Image 1">
-                <img src="https://via.placeholder.com/400" alt="Image 2">
-                <img src="https://via.placeholder.com/400" alt="Image 3">
+                <!-- Dossier Soleil -->
+                <div class="folder" onclick="openModal('soleil')">
+                    <img src="https://via.placeholder.com/200" alt="Soleil">
+                    <p>Soleil</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Section Contact -->
+    <!-- Modales pour les albums -->
+    <div id="montagneModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('montagne')">&times;</span>
+            <!-- Contenu de l'album montagne -->
+            <h3>Album Montagne</h3>
+            <img src="https://via.placeholder.com/400" alt="Image 1">
+            <img src="https://via.placeholder.com/400" alt="Image 2">
+            <img src="https://via.placeholder.com/400" alt="Image 3">
+        </div>
+    </div>
+
+    <div id="avionModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('avion')">&times;</span>
+            <!-- Contenu de l'album avion -->
+            <h3>Album Avion</h3>
+            <img src="https://via.placeholder.com/400" alt="Image 1">
+            <img src="https://via.placeholder.com/400" alt="Image 2">
+            <img src="https://via.placeholder.com/400" alt="Image 3">
+        </div>
+    </div>
+
+    <div id="soleilModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('soleil')">&times;</span>
+            <!-- Contenu de l'album soleil -->
+            <h3>Album Soleil</h3>
+            <img src="https://via.placeholder.com/400" alt="Image 1">
+            <img src="https://via.placeholder.com/400" alt="Image 2">
+            <img src="https://via.placeholder.com/400" alt="Image 3">
+        </div>
+    </div>
+       <!-- Section Contact -->
     <div class="content" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <h2>Contact <span class="heart">❤️</span></h2>
@@ -231,19 +295,25 @@
         </div>
     </div>
 
-    <!-- Script pour afficher/masquer les albums -->
+    <!-- Script pour afficher/masquer les modales -->
     <script>
-        function showAlbum(albumName) {
-            // Masquer tous les albums
-            var albums = document.querySelectorAll('.album');
-            albums.forEach(function(album) {
-                album.style.display = 'none';
-            });
+        function openModal(albumName) {
+            var modal = document.getElementById(albumName + 'Modal');
+            modal.style.display = "block";
+        }
 
-            // Afficher l'album correspondant
-            var selectedAlbum = document.querySelector('.' + albumName);
-            if (selectedAlbum) {
-                selectedAlbum.style.display = 'block';
+        function closeModal(albumName) {
+            var modal = document.getElementById(albumName + 'Modal');
+            modal.style.display = "none";
+        }
+
+        // Fermer la modale lorsque l'utilisateur clique en dehors de celle-ci
+        window.onclick = function(event) {
+            var modals = document.getElementsByClassName('modal');
+            for (var i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
             }
         }
     </script>
