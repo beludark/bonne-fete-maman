@@ -23,7 +23,7 @@
         .hero {
             position: relative;
             height: 100vh;
-            background: url('https://img.freepik.com/vecteurs-libre/fond-plat-fete-meres_23-2149385190.jpg?t=st=1716737382~exp=1716740982~hmac=ef0a8e52d8d5c1159e320f831bc2f3b8bf9411f55ec14060cce4f6c5f022fa66&w=1380') no-repeat center center/cover;
+            background: url('images/7090381.jpg') no-repeat center center/cover;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -213,10 +213,9 @@
 </head>
 <body>
     <div class="hero"></div>
-    <div class="content" data-aos="fade-up" data-aos-duration="1000">
-        <div class="container">
-            <h2>À Propos de la Fête des Mères <span class="heart">❤️</span></h2>
-            <p>La Fête des Mères est l'occasion de célébrer et d'honorer les mères du monde entier. C'est un jour pour exprimer notre amour et notre gratitude envers celles qui nous ont donné la vie et nous ont soutenus tout au long de notre parcours. <span class="heart-small">❤️</span></p>
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+            <h2>MERCI MAMAN <span class="heart">❤️</span></h2>
+            <p>Nous voulons te remercier pour tout ce que tu fais pour nous. Tu nous guide chaque jours et nous aide à aller de l'avant. Nous avons fait ce site web pour te rappeler que tu es une maman en or.<span class="heart-small"></p>
         </div>
     </div>
 
@@ -224,7 +223,7 @@
     <div class="gallery" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <h2>Galerie de Souvenirs <span class="heart">❤️</span></h2>
-            <p>Choisissez un dossier pour explorer les souvenirs <span class="heart-small">❤️</span></p>
+            <p>Voici quelques moments passés avec toi.</p>
 
             <div class="folders">
                 <!-- Dossier Montagne -->
@@ -256,7 +255,6 @@
             <h3>Album Montagne</h3>
             <img src="images/ski.jpg" alt="Image 1" style="max-width: 100%; height: auto;">
             <img src="images/ski2.jpg" alt="Image 2" style="max-width: 100%; height: auto;">
-            <img src="https://via.placeholder.com/400" alt="Image 3" style="max-width: 100%; height: auto;">
         </div>
     </div>
 
@@ -264,10 +262,9 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('avion')">&times;</span>
             <!-- Contenu de l'album avion -->
-            <h3>Album Avion</h3>
+            <h3>Album Suède</h3>
             <img src="images/suede.jpg" alt="Image 1" style="max-width: 100%; height: auto;">
             <img src="images/suede2.jpg" alt="Image 2" style="max-width: 100%; height: auto;">
-            <img src="https://via.placeholder.com/400" alt="Image 3" style="max-width: 100%; height: auto;">
         </div>
     </div>
 
@@ -276,23 +273,23 @@
             <span class="close" onclick="closeModal('soleil')">&times;</span>
             <!-- Contenu de l'album soleil -->
             <h3>Album Soleil</h3>
-            <img src="https://via.placeholder.com/400" alt="Image 1" style="max-width: 100%; height: auto;">
-            <img src="https://via.placeholder.com/400" alt="Image 2" style="max-width: 100%; height: auto;">
-            <img src="https://via.placeholder.com/400" alt="Image 3" style="max-width: 100%; height: auto;">
+            <img src="images/plage.jpg" alt="Image 1" style="max-width: 100%; height: auto;">
+            <img src="images/plage1.jpg" alt="Image 2" style="max-width: 100%; height: auto;">
+            <img src="images/plage2.jpg" alt="Image 3" style="max-width: 100%; height: auto;">
         </div>
     </div>
        <!-- Section Contact -->
     <div class="content" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <h2>Contact <span class="heart">❤️</span></h2>
-            <p>Envoie nous autant de messages que tu veux.</p>
+            <p>Tu sais déjà où nous contacter, pas besoin de laisser nos coordonées. Envoie nous autant de messages que tu veux. On t'aime fort maman </p>
         </div>
     </div>
 
     <!-- Footer -->
     <div class="footer" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
-            <p>© 2024 Mon magnifique site internet. Tous droits réservés.</p>
+            <p>© 2024 Pour la meilleure des mamans. Tous droits réservés.</p>
         </div>
     </div>
 
